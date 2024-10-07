@@ -29,6 +29,7 @@
 
     <!-- Template Stylesheet -->
     <link href="/assets/css/style.css" rel="stylesheet">
+    @stack('styles')
 </head>
 
 <body>
