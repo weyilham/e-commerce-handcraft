@@ -28,7 +28,7 @@ class CartController extends Controller
         return response()->json([
             'message' => 'Product added to cart successfully',
             'statusCode' => 200,
-            'data' => Cart::count()
+            'data' => Cart::content()->count()
         ]);
         
     }

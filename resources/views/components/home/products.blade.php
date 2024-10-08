@@ -58,7 +58,7 @@
             category.on('click', function() {
                 const category_id = $(this).data('category');
 
-                console.log(category_id);
+
                 $.ajax({
                     url: "{{ route('home.show', '') }}" + '/' + category_id,
                     type: 'GET',

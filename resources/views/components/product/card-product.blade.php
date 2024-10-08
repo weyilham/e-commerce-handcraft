@@ -27,7 +27,7 @@
 @push('scripts')
     <script>
         const addCart = $('.add-cart');
-        addCart.on('click', function(e) {
+        $(document).on('click', '.add-cart', function(e) {
             e.preventDefault();
             const id = $(this).data('id');
             $.ajax({
@@ -38,13 +38,19 @@
                     id: id
                 },
                 success: function(response) {
-                    // console.log(response.data);
 
-                    // console.log($('.cart-count').html());
+                    Swal.fire({
+                        toast: true,
+                        icon: 'success', // You can change this to 'error', 'warning', 'info', or 'question'
+                        title: 'Product added to cart',
+                        position: 'top-end', // Can be 'top', 'top-start', 'top-end', 'center', 'center-start', 'center-end', 'bottom', 'bottom-start', 'bottom-end'
+                        showConfirmButton: false, // Hide the OK button
+                        timer: 1500, // Time the toast will be visible
+                        timerProgressBar: true, // Show progress bar
+
+                    });
                     $('.cart-count').text(response.data);
-                    // console.log(response)
                 }
-
             })
         })
     </script>

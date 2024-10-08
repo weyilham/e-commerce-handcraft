@@ -29,6 +29,8 @@
 
     <!-- Template Stylesheet -->
     <link href="/assets/css/style.css" rel="stylesheet">
+
+
     @stack('styles')
 </head>
 
@@ -189,6 +191,8 @@
 
     <!-- Template Javascript -->
     <script src="/assets/js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     @stack('scripts')
 </body>

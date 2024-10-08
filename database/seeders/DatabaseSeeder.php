@@ -22,12 +22,14 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        User::create([
+       $user = User::create([
             'name' => 'Ilham Maulana',
             'email' => 'ilham@admin.com',
             'password' => Hash::make('password'),
             'image' => 'image.png'
         ]);
+
+        $user->assignRole('Admin');
 
         $this->call([
             companySeeder::class
